@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: @highlight-color;
 }
 
 *:before,
@@ -58,7 +58,7 @@ a {
     }
 
     &[disabled] {
-        color: #ccc;
+        color: @slider-disabled-color;
         cursor: @cursor-disabled;
         pointer-events: none;
     }
