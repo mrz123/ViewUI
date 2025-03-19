@@ -115,7 +115,7 @@
         .@{tabs-prefix-cls}-tab-disabled {
             pointer-events: none;
             cursor: default;
-            color: #ccc;
+            color: @slider-disabled-color;
         }
 
         .@{tabs-prefix-cls}-tab {
@@ -200,7 +200,7 @@
     &&-card > &-bar &-tab-active {
         height: 32px;
         padding-bottom: 5px;
-        background: #fff;
+        background: @white;
         transform: translateZ(0);
         border-color: @border-color-base;
         color: @primary-color;
@@ -222,7 +222,7 @@
         transform-origin: 100% 50%;
         transition: all 0.3s @ease-in-out;
         &:hover {
-            color: #444;
+            color: @close-base-hover-color;
         }
     }
 

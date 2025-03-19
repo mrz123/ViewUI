@@ -52,7 +52,7 @@
 
     &-wrap * {
         box-sizing: border-box;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: @rgba-0;
     }
 
     &-mask {
@@ -68,10 +68,10 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        background-color: #fff;
+        background-color: @white;
         border: 0;
         background-clip: padding-box;
-        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+        box-shadow: 0 4px 12px @rgba-015;
 
         &-no-mask{
             pointer-events: auto;
@@ -135,10 +135,10 @@
             line-height: 100px;
             position: absolute;
             top: 50%;
-            background: rgb(243, 243, 243);
+            background: @rgb-243;
             transform: translate(-50%, -50%);
             border-radius: 4px;
-            box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+            box-shadow: 0 0 1px 1px @rgba-02;
             cursor: col-resize;
             &-point{
                 display: inline-block;
@@ -146,7 +146,7 @@
                 transform: translateX(50%);
                 i{
                     display: block;
-                    border-bottom: 1px solid rgb(192, 192, 192);
+                    border-bottom: 1px solid @rgb-192;
                     padding-bottom: 2px;
                 }
             }
@@ -168,7 +168,7 @@
                     border-bottom: inherit;
                     width: 1px;
                     height: 100%;
-                    border-left: 1px solid rgb(192, 192, 192);
+                    border-left: 1px solid @rgb-192;
                     padding-bottom: inherit;
                     margin-left: 2px;
                 }

@@ -20,7 +20,7 @@
     overflow: hidden;
     color: @text-color;
     font-size: @font-size-base;
-    background-color: #fff;
+    background-color: @white;
 
     box-sizing: border-box;
     //position: relative;
@@ -164,7 +164,7 @@
         background-color: @table-thead-bg;
     }
     td{
-        background-color: #fff;
+        background-color: @white;
         transition: background-color @transition-time @ease-in-out;
     }
 
@@ -254,7 +254,7 @@
             height: 16px;
             border: 1px solid @border-color-base;
             border-radius: 2px;
-            background-color: #fff;
+            background-color: @white;
             line-height: 12px;
             cursor: pointer;
             vertical-align: middle;
@@ -407,10 +407,10 @@
         right: 0;
     }
     &-fixed&-fixed-shadow{
-        box-shadow: 2px 0 6px -2px rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 0 6px -2px @rgba-02;
     }
     &-fixed-right&-fixed-shadow{
-        box-shadow: -2px 0 6px -2px rgba(0, 0, 0, 0.2);
+        box-shadow: -2px 0 6px -2px @rgba-02;
     }
     &-fixed-right-header{
         position: absolute;

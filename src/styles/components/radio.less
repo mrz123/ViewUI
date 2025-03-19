@@ -48,7 +48,7 @@
     cursor: pointer;
     &:hover {
         .@{radio-inner-prefix-cls} {
-            border-color: #bcbcbc;
+            border-color: @checkbox-hover-border-color;
         }
     }
     &-inner {
@@ -58,7 +58,7 @@
         position: relative;
         top: 0;
         left: 0;
-        background-color: #fff;
+        background-color: @white;
         border: 1px solid @border-color-base;
         border-radius: 50%;
         transition: all @transition-time @ease-in-out;
@@ -173,14 +173,14 @@
     }
     .@{radio-inner-prefix-cls} {
         border-color: @border-color-base;
-        background-color: #f3f3f3;
+        background-color: @input-disabled-bg;
         &:after {
-            background-color: #cccccc;
+            background-color: @slider-disabled-color;
         }
     }
 
     .@{radio-prefix-cls}-disabled + span {
-        color: #ccc;
+        color: @slider-disabled-color;
     }
 }
 
@@ -211,7 +211,7 @@ span.@{radio-prefix-cls} + * {
         cursor: pointer;
         border: 1px solid @border-color-base;
         border-left: 0;
-        background: #fff;
+        background: @white;
         position: relative;
 
         > span {
@@ -271,7 +271,7 @@ span.@{radio-prefix-cls} + * {
         }
 
         &-checked {
-            background: #fff;
+            background: @white;
             border-color: @primary-color;
             color: @primary-color;
             box-shadow: -1px 0 0 0 @primary-color;
@@ -318,13 +318,13 @@ span.@{radio-prefix-cls} + * {
             border-color: @border-color-base;
             background-color: @background-color-base;
             cursor: @cursor-disabled;
-            color: #ccc;
+            color: @slider-disabled-color;
 
             &:first-child,
             &:hover {
                 border-color: @border-color-base;
                 background-color: @background-color-base;
-                color: #ccc;
+                color: @slider-disabled-color;
             }
             &:first-child {
                 border-left-color: @border-color-base;
@@ -332,8 +332,8 @@ span.@{radio-prefix-cls} + * {
         }
 
         &-disabled.@{radio-prefix-cls}-wrapper-checked {
-            color: #fff;
-            background-color: #e6e6e6;
+            color: @white;
+            background-color: @radio-disabled-wrapper-checked;
             border-color: @border-color-base;
             box-shadow: none!important;
         }
@@ -341,10 +341,10 @@ span.@{radio-prefix-cls} + * {
     &-solid .@{radio-prefix-cls}-wrapper{
         &-checked:not(.@{radio-prefix-cls}-wrapper-disabled){
             background: @primary-color;
-            color: #fff;
+            color: @white;
             &:hover{
                 background: tint(@primary-color, 20%);
-                color: #fff;
+                color: @white;
             }
         }
     }

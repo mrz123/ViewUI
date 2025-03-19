@@ -31,14 +31,14 @@
     &-inner {
         display: inline-block;
         width: 100%;
-        background-color: #f3f3f3;
+        background-color: @input-disabled-bg;
         border-radius: 100px;
         vertical-align: middle;
         position: relative;
         &-text{
             display: inline-block;
             vertical-align: middle;
-            color: #fff;
+            color: @white;
             font-size: 12px;
             margin: 0 6px;
         }
@@ -98,7 +98,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: #fff;
+            background: @white;
             border-radius: 10px;
             animation: ivu-progress-active 2s @ease-in-out infinite;
         }

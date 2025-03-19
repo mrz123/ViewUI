@@ -35,7 +35,7 @@
     &-star-first, &-star-second {
         user-select: none;
         transition: all .3s ease;
-        color: #e9e9e9;
+        color: @rate-star-first-color;
         cursor: pointer;
     }
 
@@ -63,7 +63,7 @@
         opacity: 1;
         color: @rate-star-color;
     }
-    
+
     &-star {
         display: inline-block;
         margin: 0;
@@ -79,7 +79,7 @@
 
         &:before,
         &-content:before {
-            color: #e9e9e9;
+            color: @rate-star-first-color;
             cursor: pointer;
             content: "\F2BF";
             transition: all @transition-time @ease-in-out;

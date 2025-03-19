@@ -20,7 +20,7 @@
     background-color: @input-disabled-bg;
     opacity: 1;
     cursor: @cursor-disabled;
-    color: #ccc;
+    color: @slider-disabled-color;
     &:hover {
         .hover(@input-border-color);
     }
@@ -272,7 +272,7 @@
     &-prepend,
     &-append
     {
-        background-color: #fff;
+        background-color: @white;
         border: 1px solid @error-color;
         .@{css-prefix}select {
             &-selection {

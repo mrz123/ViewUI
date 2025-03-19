@@ -99,7 +99,7 @@
         left: -1px;
         bottom: -1px;
         right: -1px;
-        background: #fff;
+        background: @white;
         opacity: 0.35;
         content: '';
         border-radius: inherit;
@@ -128,15 +128,15 @@
 
     // The new ghost in 3.0
     &-ghost{
-        color: #fff;
+        color: @white;
         background: transparent;
         &:hover{
             background: transparent;
         }
     }
     &-ghost&-dashed, &-ghost&-default{
-        color: #fff;
-        border-color: #fff;
+        color: @white;
+        border-color: @white;
         &:hover{
             color: tint(@primary-color, 20%);
             border-color: tint(@primary-color, 20%);
@@ -180,12 +180,12 @@
 
     &-ghost&-default[disabled], &-ghost&-dashed[disabled], &-ghost&-primary[disabled], &-ghost&-info[disabled], &-ghost&-success[disabled], &-ghost&-warning[disabled], &-ghost&-error[disabled]{
         background: transparent;
-        color: fade(#000, 25%);
+        color: fade(@black, 25%);
         border-color: @btn-disable-border;
     }
     &-ghost&-text[disabled]{
         background: transparent;
-        color: fade(#000, 25%);
+        color: fade(@black, 25%);
     }
 }
 

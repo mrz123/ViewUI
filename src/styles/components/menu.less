@@ -47,7 +47,7 @@
     }
 
     &-light{
-        background: #fff;
+        background: @white;
     }
     &-dark{
         background: @menu-dark-title;
@@ -104,12 +104,12 @@
     &-dark&-horizontal &-item, &-dark&-horizontal &-submenu{
         color: @menu-dark-subsidiary-color;
         &-active, &:hover{
-            color: #fff;
+            color: @white;
         }
     }
 
     &-primary&-horizontal &-item, &-primary&-horizontal &-submenu{
-        color: #fff;
+        color: @white;
         &-active, &:hover{
             //background: @link-active-color;
         }
@@ -186,7 +186,7 @@
         .@{menu-prefix-cls}-item{
             padding-left: 43px;
         }
-    } 
+    }
     &-vertical &-item-group{
         &-title{
             height: 48px;
@@ -229,7 +229,7 @@
             background: @menu-dark-active-bg;
         }
         &:hover{
-            color: #fff;
+            color: @white;
             background: @menu-dark-title;
         }
         &-active:not(.@{menu-prefix-cls}-submenu){
@@ -239,12 +239,12 @@
     }
     &-dark&-vertical &-submenu &-item{
         &:hover{
-            color: #fff;
+            color: @white;
             background: transparent !important;
         }
         &-active,&-active:hover{
             border-right: none;
-            color: #fff;
+            color: @white;
             background: @primary-color !important;
         }
     }
@@ -252,7 +252,7 @@
     //     color: #fff;
     // }
     &-dark&-vertical &-child-item-active > &-submenu-title{
-        color: #fff;
+        color: @white;
     }
 
     &-dark&-vertical &-opened{

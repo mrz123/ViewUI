@@ -67,11 +67,11 @@
         transform: translateY(-50%);
 
         transition: @transition-time;
-        background-color: rgba(31, 45, 61, .11);
-        color: #fff;
+        background-color: @carousel-arrow-background-color;
+        color: @white;
 
         &:hover {
-            background-color: rgba(31, 45, 61, 0.5);
+            background-color: @carousel-hover-background-color;
         }
 
         text-align: center;
@@ -150,7 +150,7 @@
                 border: 0;
                 cursor: pointer;
 
-                background: #8391a5;
+                background: @carousel-dots-li-button-background;
                 opacity: 0.3;
 
                 display: block;

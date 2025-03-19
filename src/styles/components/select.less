@@ -20,7 +20,7 @@
         cursor: pointer;
         position: relative;
 
-        background-color: #fff;
+        background-color: @white;
         border-radius: @btn-border-radius;
         border: 1px solid @border-color-base;
         transition: all @transition-time @ease-in-out;
@@ -168,8 +168,8 @@
 
         &[disabled]{
             cursor: @cursor-disabled;
-            color: #ccc;
-            -webkit-text-fill-color: #ccc;  // #5249
+            color: @slider-disabled-color;
+            -webkit-text-fill-color: @slider-disabled-color;  // #5249
         }
     }
 
@@ -301,7 +301,7 @@
     position: relative;
     &-selected{
         color: @selected-color;
-        background: #fff;
+        background: @white;
     }
     &-focus,&-selected:hover{
         background: @background-color-select-hover;
@@ -309,7 +309,7 @@
 
     &-selected&-focus {
         color: shade(@selected-color, 10%);
-        background: #fff;
+        background: @white;
     }
 
     &-selected:after{
@@ -328,7 +328,7 @@
             color: @btn-disable-color;
         }
         &:hover{
-            background-color: #fff;
+            background-color: @white;
         }
     }
 }

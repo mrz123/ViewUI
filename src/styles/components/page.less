@@ -20,7 +20,7 @@
         margin-right: 4px;
         text-align: center;
         list-style: none;
-        background-color: #fff;
+        background-color: @white;
         user-select: none;
         cursor: pointer;
         font-family: Arial;
@@ -57,12 +57,12 @@
         cursor: @cursor-disabled;
         background-color: @input-disabled-bg;
         a {
-            color: #ccc;
+            color: @slider-disabled-color;
         }
         &:hover {
             border-color: @border-color-base;
             a {
-                color: #ccc;
+                color: @slider-disabled-color;
                 cursor: @cursor-disabled;
             }
         }
@@ -71,7 +71,7 @@
             border-color: @border-color-base;
 
             a, &:hover a {
-                color: #fff;
+                color: @white;
             }
         }
     }
@@ -85,7 +85,7 @@
         //    text-align: center;
         //}
         i{
-            color: #ccc;
+            color: @slider-disabled-color;
         }
         i:first-child{
             display: none;
@@ -108,7 +108,7 @@
     &-with-disabled &-item-jump-prev, &-with-disabled &-item-jump-next{
         cursor: @cursor-disabled;
         i{
-            color: #ccc;
+            color: @slider-disabled-color;
         }
         &:hover {
             //&:after{
@@ -160,7 +160,7 @@
         list-style: none;
         text-align: center;
         cursor: pointer;
-        color: #666;
+        color: @article-blockquote-color;
         font-family: Arial;
         border: 1px solid @border-color-base;
         border-radius: @btn-border-radius;
@@ -173,10 +173,10 @@
 
     &-prev,
     &-next {
-        background-color: #fff;
+        background-color: @white;
 
         a {
-            color: #666;
+            color: @article-blockquote-color;
             font-size: 14px;
         }
 
@@ -192,12 +192,12 @@
     &-disabled {
         cursor: @cursor-disabled;
         a {
-            color: #ccc;
+            color: @slider-disabled-color;
         }
         &:hover {
             border-color: @border-color-base;
             a {
-                color: #ccc;
+                color: @slider-disabled-color;
                 cursor: @cursor-disabled;
             }
         }
@@ -261,7 +261,7 @@
             padding: 5px 8px;
             text-align: center;
             box-sizing: border-box;
-            background-color: #fff;
+            background-color: @white;
             outline: none;
             border: 1px solid @border-color-base;
             border-radius: @btn-border-radius;

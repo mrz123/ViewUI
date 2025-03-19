@@ -50,7 +50,7 @@
             color: @legend-color;
             transition: all @transition-time ease;
             &:hover{
-                color: #444;
+                color: @close-base-hover-color;
             }
         }
     }
@@ -58,9 +58,9 @@
      &-select {
         display: inline-block;
     }
-    
+
     &-drag{
-        background: #fff;
+        background: @white;
         border: 1px dashed @border-color-base;
         border-radius: @border-radius-small;
         text-align: center;

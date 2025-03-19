@@ -7,8 +7,8 @@
     line-height: 20px;
     border-radius: 22px;
     vertical-align: middle;
-    border: 1px solid #ccc;
-    background-color: #ccc;
+    border: 1px solid @slider-disabled-color;
+    background-color: @slider-disabled-color;
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -19,7 +19,7 @@
     }
 
     &-inner {
-        color: #fff;
+        color: @white;
         font-size: @font-size-small;
         position: absolute;
         left: 23px;
@@ -38,7 +38,7 @@
         width: 18px;
         height: 18px;
         border-radius: 18px;
-        background-color: #fff;
+        background-color: @white;
         position: absolute;
         left: 1px;
         top: 1px;
@@ -156,12 +156,12 @@
         opacity: .4;
 
         &:after {
-            background: #fff;
+            background: @white;
             cursor: not-allowed;
         }
 
         .@{switch-prefix-cls}-inner {
-            color: #fff;
+            color: @white;
         }
     }
 
@@ -171,11 +171,11 @@
         opacity: .4;
 
         &:after {
-            background: #fff;
+            background: @white;
         }
 
         .@{switch-prefix-cls}-inner {
-            color: #fff;
+            color: @white;
         }
     }
 
