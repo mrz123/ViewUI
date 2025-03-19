@@ -1,6 +1,6 @@
 {
     "presets": [
-        ["env", {
+        ["@babel/preset-env", {
             "loose": false,
             "modules": "commonjs",
             "spec": true,
@@ -16,17 +16,17 @@
                 ]
             },
             "useBuiltIns": "usage",
+            "corejs": 3,
             "debug": false
-        }],
-        "stage-3"
+        }]
     ],
     "plugins": [
         "dynamic-import-node",
-        "transform-class-properties",
-        "transform-es5-property-mutators",
-        "transform-object-rest-spread",
-        "transform-runtime",
-        "transform-vue-jsx"
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-transform-runtime",
+        "transform-vue-jsx",
+        "babel-plugin-syntax-jsx"
     ],
     "comments": false
 }

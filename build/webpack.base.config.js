@@ -4,6 +4,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const pkg = require('../package.json');
+const { VueLoaderPlugin } = require('vue-loader');
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir);
@@ -12,18 +13,54 @@ function resolve (dir) {
 module.exports = {
     // 加载器
     module: {
-        // https://doc.webpack-china.org/guides/migrating/#module-loaders-module-rules
         rules: [
             {
-                // https://vue-loader.vuejs.org/en/configurations/extract-css.html
                 test: /\.vue$/,
-                loader: 'vue-loader',
+                use:[
+                    {
+                        loader: 'vue-loader',
+                        options: {
+                            loaders: {
+                                css: [
+                                    'vue-style-loader',
+                                    {
+                                        loader: 'css-loader',
+                                        options: {
+                                            sourceMap: true,
+                                        },
+                                    },
+                                ],
+                                less: [
+                                    'vue-style-loader',
+                                    {
+                                        loader: 'css-loader',
+                                        options: {
+                                            sourceMap: true,
+                                        },
+                                    },
+                                    {
+                                        loader: 'less-loader',
+                                        options: {
+                                            sourceMap: true,
+                                            lessOptions: {
+                                                javascriptEnabled: true, // 启用内联 JavaScript
+                                            },
+                                        },
+                                    },
+                                ],
+                            },
+                            sourceMap: true,
+                        },
+
+                    }
+                ],
+/*                use: 'vue-loader',
                 options: {
-                    loaders: {
+                    use: {
                         css: [
                             'vue-style-loader',
                             {
-                                loader: 'css-loader',
+                                use: 'css-loader',
                                 options: {
                                     sourceMap: true,
                                 },
@@ -32,40 +69,48 @@ module.exports = {
                         less: [
                             'vue-style-loader',
                             {
-                                loader: 'css-loader',
+                                use: 'css-loader',
                                 options: {
                                     sourceMap: true,
                                 },
                             },
                             {
-                                loader: 'less-loader',
+                                use: 'less-loader',
                                 options: {
                                     sourceMap: true,
                                 },
                             },
                         ],
                     },
-                    postLoaders: {
-                        html: 'babel-loader?sourceMap'
-                    },
+                    // postLoaders 在 Webpack 2 之后已废弃，需移除或替换为 enforce: 'post'
+                    // postLoaders: {
+                    //    html: 'babel-loader?sourceMap'
+                    // },
+
                     sourceMap: true,
-                }
+                }*/
             },
+
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                options: {
-                    sourceMap: true,
-                },
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    }
+                ],
                 exclude: /node_modules/,
             },
+
             {
                 test: /\.css$/,
-                loaders: [
+                use: [
                     {
                         loader: 'style-loader',
                         options: {
-                            sourceMap: true,
+                            // sourceMap: true,
                         },
                     },
                     {
@@ -75,17 +120,19 @@ module.exports = {
                         },
                     },
                     {
-                        loader: '\'autoprefixer-loader\'',
+                        //'autoprefixer-loader' 已废弃，应替换为 postcss-loader
+                        // loader: '\'autoprefixer-loader\'',
+                        loader: 'postcss-loader',
                     },
                 ]
             },
             {
                 test: /\.less$/,
-                loaders: [
+                use: [
                     {
                         loader: 'style-loader',
                         options: {
-                            sourceMap: true,
+                            // sourceMap: true,
                         },
                     },
                     {
@@ -98,17 +145,20 @@ module.exports = {
                         loader: 'less-loader',
                         options: {
                             sourceMap: true,
+                            lessOptions: {
+                                javascriptEnabled: true, // 启用内联 JavaScript
+                            },
                         },
                     },
                 ]
             },
             {
                 test: /\.scss$/,
-                loaders: [
+                use: [
                     {
                         loader: 'style-loader',
                         options: {
-                            sourceMap: true,
+                            // sourceMap: true,
                         },
                     },
                     {
@@ -127,11 +177,11 @@ module.exports = {
             },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-                loader: 'url-loader?limit=8192'
+                use: 'url-loader?limit=8192'
             },
             {
                 test: /\.(html|tpl)$/,
-                loader: 'html-loader'
+                use: 'html-loader'
             }
         ]
     },
@@ -147,5 +197,6 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.VERSION': `'${pkg.version}'`
         }),
+        new VueLoaderPlugin()
     ]
 };

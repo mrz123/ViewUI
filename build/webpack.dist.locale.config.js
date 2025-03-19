@@ -1,7 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const entry = require('./locale');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// 替换已废弃的插件
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin'); // 替换 UglifyJsPlugin
 
 process.env.NODE_ENV = 'production';
 
@@ -42,9 +44,16 @@ module.exports = {
                 NODE_ENV: '"production"'
             }
         }),
-        new UglifyJsPlugin({
+		// 修改插件配置
+        // new UglifyJsPlugin({
+        //     parallel: true,
+        //     sourceMap: true,
+        // })
+		new TerserPlugin({
             parallel: true,
-            sourceMap: true,
-        })
+            terserOptions: {
+                sourceMap: true, // 在 terserOptions 中配置 sourceMap
+            },
+        }),
     ]
 };

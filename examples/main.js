@@ -1,7 +1,12 @@
 /**
  * Created by aresn on 16/6/20.
  */
-import 'babel-polyfill';
+// 但在 Babel 7.4.0 及以上版本中，babel-polyfill 已经被弃用 移除 babel-polyfill
+// 使用 core-js 和 regenerator-runtime
+// import 'babel-polyfill';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './app.vue';

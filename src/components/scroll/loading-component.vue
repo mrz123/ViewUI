@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
     <div :class="wrapperClasses">
         <div :class="spinnerClasses">
             <Spin fix>
@@ -13,9 +13,7 @@
 <script>
     import Spin from '../spin/spin.vue';
     import Icon from '../icon/icon.vue';
-
     const prefixCls = 'ivu-scroll';
-
     export default {
         props: ['text', 'active', 'spinnerHeight'],
         components: { Spin, Icon },
