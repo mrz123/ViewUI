@@ -54,41 +54,6 @@ module.exports = {
 
                     }
                 ],
-/*                use: 'vue-loader',
-                options: {
-                    use: {
-                        css: [
-                            'vue-style-loader',
-                            {
-                                use: 'css-loader',
-                                options: {
-                                    sourceMap: true,
-                                },
-                            },
-                        ],
-                        less: [
-                            'vue-style-loader',
-                            {
-                                use: 'css-loader',
-                                options: {
-                                    sourceMap: true,
-                                },
-                            },
-                            {
-                                use: 'less-loader',
-                                options: {
-                                    sourceMap: true,
-                                },
-                            },
-                        ],
-                    },
-                    // postLoaders 在 Webpack 2 之后已废弃，需移除或替换为 enforce: 'post'
-                    // postLoaders: {
-                    //    html: 'babel-loader?sourceMap'
-                    // },
-
-                    sourceMap: true,
-                }*/
             },
 
             {
@@ -177,7 +142,7 @@ module.exports = {
             },
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-                use: 'url-loader?limit=8192'
+                use: 'url-loader?limit=4096' //限制为4KB，超过的文件使用file-loader
             },
             {
                 test: /\.(html|tpl)$/,

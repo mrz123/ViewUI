@@ -7,11 +7,18 @@ const webpackBaseConfig = require('./webpack.base.config.js');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = merge(webpackBaseConfig,{
+    mode: 'development', // 添加此行， 略过警告
+
     devtool: 'eval-source-map',
     // 入口
     entry: {
-        main: './examples/main',
-        vendors: ['vue', 'vue-router']
+        main: './examples/main'
+        // vendors: ['vue', 'vue-router']  // 删除此行，避免main文件过大
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all', // 自动提取公共模块
+        },
     },
     // 输出
     output: {

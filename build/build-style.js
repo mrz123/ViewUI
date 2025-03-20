@@ -14,12 +14,14 @@ gulp.task('css', function () {
             javascriptEnabled: true, // 启用内联 JavaScript
             paths: ['../src/styles'] // 添加 Less 文件查找路径
         }))
+        .on('error', console.error) // 捕获并输出编译错误
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions', 'ie > 8'] // 更新 browsers 配置
         }))
         .pipe(cleanCSS())
         .pipe(rename('iview.css'))
-        .pipe(gulp.dest('../dist/styles'));
+        .pipe(gulp.dest('../dist/styles'))
+        .pipe(gulp.dest('./temp'));
 });
 
 // 拷贝字体文件

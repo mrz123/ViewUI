@@ -1,10 +1,11 @@
 <style lang="less">
-    @import "../src/styles/index.less";
+    // @import "../src/styles/index.less";
 </style>
 <template>
     <div class="container">
         <div>
             <div>
+                <Icon type="md-skip-forward" />
                 <span><router-link to="/split">Split</router-link></span>
                 <span><router-link to="/layout">Layout</router-link></span>
                 <span><router-link to="/affix">Affix</router-link></span>
