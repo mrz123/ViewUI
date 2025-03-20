@@ -24,6 +24,7 @@
   "scripts": {
     "dev": "webpack serve --config build/webpack.dev.config.js",
     "dev:s": "webpack serve --host 0.0.0.0 --config build/webpack.dev.config.js",
+    "dist:dark-style": "gulp --gulpfile build/build-dark-style.js",
     "dist:style": "gulp --gulpfile build/build-style.js",
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:prod": "webpack --config build/webpack.dist.prod.config.js",
