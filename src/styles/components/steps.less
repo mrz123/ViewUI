@@ -29,7 +29,7 @@
 
         &.@{steps-prefix-cls}-status-wait{
             .@{steps-prefix-cls}-head-inner {
-                background-color: @white;
+                background-color: @component-background;
                 > .@{steps-prefix-cls}-icon, span {
                     color: @steps-wait-icon-color;
                 }
@@ -49,7 +49,7 @@
                 border-color: @primary-color;
                 background-color: @primary-color;
                 > .@{steps-prefix-cls}-icon, span {
-                    color: @white;
+                    color: @legend-color;
                 }
             }
             .@{steps-prefix-cls}-title {
@@ -64,7 +64,7 @@
         }
         &.@{steps-prefix-cls}-status-finish {
             .@{steps-prefix-cls}-head-inner {
-                background-color: @white;
+                background-color: @component-background;
                 border-color: @primary-color;
                 > .@{steps-prefix-cls}-icon, span {
                     color: @primary-color;
@@ -86,7 +86,7 @@
 
         &.@{steps-prefix-cls}-status-error {
             .@{steps-prefix-cls}-head-inner {
-                background-color: @white;
+                background-color: @component-background;
                 border-color: @error-color;
                 > .@{steps-prefix-cls}-icon {
                     color: @error-color;
@@ -141,7 +141,7 @@
         vertical-align: top;
     }
     .@{steps-prefix-cls}-head {
-        background: @white;
+        background: @component-background;
     }
 
     .@{steps-prefix-cls}-head-inner {
@@ -184,7 +184,7 @@
         font-size: 14px;
         font-weight: bold;
         color: @article-blockquote-color;
-        background: @white;
+        background: @body-background; //@component-background;
 
         > a:first-child:last-child {
             color: @article-blockquote-color;

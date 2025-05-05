@@ -1,6 +1,9 @@
 @btn-prefix-cls: ~"@{css-prefix}btn";
 
 .@{btn-prefix-cls} {
+/*    .btn {
+        border: @btn-default-border
+    }*/
     .btn;
     .btn-default;
 
@@ -24,7 +27,7 @@
             &:not(:last-child) {
                 border-right-color: @btn-group-border;
                 &[disabled] {
-                    border-right-color: @btn-default-border;
+                    border-right-color: @btn-default-border-color;
                 }
             }
         }
@@ -33,7 +36,7 @@
         .@{btn-prefix-cls}-group:not(.@{btn-prefix-cls}-group-vertical) & + .@{btn-prefix-cls} {
             border-left-color: @btn-group-border;
             &[disabled] {
-                border-left-color: @btn-default-border;
+                border-left-color: @btn-default-border-color;
             }
         }
 
@@ -46,7 +49,7 @@
             &:not(:last-child) {
                 border-bottom-color: @btn-group-border;
                 &[disabled] {
-                    border-top-color: @btn-default-border;
+                    border-top-color: @btn-default-border-color;
                 }
             }
         }
@@ -55,7 +58,7 @@
         .@{btn-prefix-cls}-group-vertical & + .@{btn-prefix-cls} {
             border-top-color: @btn-group-border;
             &[disabled] {
-                border-bottom-color: @btn-default-border;
+                border-bottom-color: @btn-default-border-color;
             }
         }
     }
@@ -99,7 +102,7 @@
         left: -1px;
         bottom: -1px;
         right: -1px;
-        background: @white;
+        background: @component-background;
         opacity: 0.35;
         content: '';
         border-radius: inherit;
@@ -128,15 +131,15 @@
 
     // The new ghost in 3.0
     &-ghost{
-        color: @white;
+        color: @legend-color;
         background: transparent;
         &:hover{
             background: transparent;
         }
     }
     &-ghost&-dashed, &-ghost&-default{
-        color: @white;
-        border-color: @white;
+        color: @legend-color;
+        border-color: @component-background;
         &:hover{
             color: tint(@primary-color, 20%);
             border-color: tint(@primary-color, 20%);
@@ -180,12 +183,12 @@
 
     &-ghost&-default[disabled], &-ghost&-dashed[disabled], &-ghost&-primary[disabled], &-ghost&-info[disabled], &-ghost&-success[disabled], &-ghost&-warning[disabled], &-ghost&-error[disabled]{
         background: transparent;
-        color: fade(@black, 25%);
+        color: fade(@legend-color, 25%);
         border-color: @btn-disable-border;
     }
     &-ghost&-text[disabled]{
         background: transparent;
-        color: fade(@black, 25%);
+        color: fade(@legend-color, 25%);
     }
 }
 

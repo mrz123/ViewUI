@@ -57,7 +57,7 @@
 
     &-inner{
         width: 100%;
-        background-color: @white;
+        background-color: @component-background;
         background-clip: padding-box;
         //border: 1px solid @border-color-split;
         border-radius: @border-radius-small;
@@ -76,7 +76,7 @@
             margin-left: -@poptip-arrow-width;
             border-bottom-width: 0;
             border-top-width: @poptip-arrow-width;
-            border-top-color: @white;
+            border-top-color: @border-color-base;
         }
 
         &[x-placement^="right"] .@{poptip-arrow}:after {
@@ -85,7 +85,7 @@
             bottom: -@poptip-arrow-width;
             border-left-width: 0;
             border-right-width: @poptip-arrow-width;
-            border-right-color: @white;
+            border-right-color: @border-color-base;
         }
 
         &[x-placement^="bottom"] .@{poptip-arrow}:after {
@@ -94,7 +94,7 @@
             margin-left: -@poptip-arrow-width;
             border-top-width: 0;
             border-bottom-width: @poptip-arrow-width;
-            border-bottom-color: @white;
+            border-bottom-color: @border-color-base;
         }
 
         &[x-placement^="left"] .@{poptip-arrow}:after {
@@ -102,7 +102,7 @@
             right: 1px;
             border-right-width: 0;
             border-left-width: @poptip-arrow-width;
-            border-left-color: @white;
+            border-left-color: @border-color-base;
             bottom: -@poptip-arrow-width;
         }
     }

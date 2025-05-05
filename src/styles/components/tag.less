@@ -62,9 +62,9 @@
     &-dot{
         height: 32px;
         line-height: 32px;
-        border: 1px solid @border-color-split !important;
+        border: 1px solid @tag-dot-border !important;
         color: @text-color !important;
-        background: @white !important;
+        background: @component-background !important;
         padding: 0 12px;
 
         &-inner{
@@ -88,7 +88,7 @@
         line-height: 24px;
         border: 1px solid @border-color-split;
         color: @border-color-split;
-        background: @white !important;
+        background: @component-background !important;
         position: relative;
 
         .@{tag-close-prefix-cls} {
@@ -208,7 +208,7 @@
         a:hover,
         .@{tag-close-prefix-cls},
         .@{tag-close-prefix-cls}:hover {
-            color: @white;
+            color: @legend-color;
         }
         //.@{tag-close-prefix-cls}{
         //    top: 2px;

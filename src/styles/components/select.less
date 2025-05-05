@@ -20,7 +20,7 @@
         cursor: pointer;
         position: relative;
 
-        background-color: @white;
+        background-color: @body-background ;//@component-background;
         border-radius: @btn-border-radius;
         border: 1px solid @border-color-base;
         transition: all @transition-time @ease-in-out;
@@ -301,7 +301,7 @@
     position: relative;
     &-selected{
         color: @selected-color;
-        background: @white;
+        background: @component-background;
     }
     &-focus,&-selected:hover{
         background: @background-color-select-hover;
@@ -309,7 +309,7 @@
 
     &-selected&-focus {
         color: shade(@selected-color, 10%);
-        background: @white;
+        background: @component-background;
     }
 
     &-selected:after{
@@ -328,7 +328,7 @@
             color: @btn-disable-color;
         }
         &:hover{
-            background-color: @white;
+            background-color: @component-background;
         }
     }
 }

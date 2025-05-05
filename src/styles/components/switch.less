@@ -19,7 +19,7 @@
     }
 
     &-inner {
-        color: @white;
+        color: @text-color;
         font-size: @font-size-small;
         position: absolute;
         left: 23px;
@@ -38,7 +38,7 @@
         width: 18px;
         height: 18px;
         border-radius: 18px;
-        background-color: @white;
+        background-color: @component-background;
         position: absolute;
         left: 1px;
         top: 1px;
@@ -156,12 +156,12 @@
         opacity: .4;
 
         &:after {
-            background: @white;
+            background: @component-background;
             cursor: not-allowed;
         }
 
         .@{switch-prefix-cls}-inner {
-            color: @white;
+            color: @legend-color;
         }
     }
 
@@ -171,11 +171,11 @@
         opacity: .4;
 
         &:after {
-            background: @white;
+            background: @component-background;
         }
 
         .@{switch-prefix-cls}-inner {
-            color: @white;
+            color: @legend-color;
         }
     }
 

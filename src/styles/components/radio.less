@@ -58,7 +58,7 @@
         position: relative;
         top: 0;
         left: 0;
-        background-color: @white;
+        background-color: @component-background;
         border: 1px solid @border-color-base;
         border-radius: 50%;
         transition: all @transition-time @ease-in-out;
@@ -211,7 +211,7 @@ span.@{radio-prefix-cls} + * {
         cursor: pointer;
         border: 1px solid @border-color-base;
         border-left: 0;
-        background: @white;
+        background: @component-background;
         position: relative;
 
         > span {
@@ -271,7 +271,7 @@ span.@{radio-prefix-cls} + * {
         }
 
         &-checked {
-            background: @white;
+            background: @component-background;
             border-color: @primary-color;
             color: @primary-color;
             box-shadow: -1px 0 0 0 @primary-color;
@@ -332,7 +332,7 @@ span.@{radio-prefix-cls} + * {
         }
 
         &-disabled.@{radio-prefix-cls}-wrapper-checked {
-            color: @white;
+            color: @legend-color;
             background-color: @radio-disabled-wrapper-checked;
             border-color: @border-color-base;
             box-shadow: none!important;
@@ -341,10 +341,10 @@ span.@{radio-prefix-cls} + * {
     &-solid .@{radio-prefix-cls}-wrapper{
         &-checked:not(.@{radio-prefix-cls}-wrapper-disabled){
             background: @primary-color;
-            color: @white;
+            color:@legend-color;
             &:hover{
                 background: tint(@primary-color, 20%);
-                color: @white;
+                color: @legend-color;
             }
         }
     }

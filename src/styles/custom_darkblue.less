@@ -1,0 +1,168 @@
+@import "color/colors";
+@import "./common_size";
+@import 'color/colorPalette';
+
+// Color
+@primary-color          : #2d8cf0;
+@info-color             : #2db7f5;
+@success-color          : #19be6b;
+@processing-color       : @primary-color;
+@warning-color          : #ff9900;
+@error-color            : #ed4014;
+@normal-color           : #071F41; // 深蓝背景
+@link-color             : #2D8cF0;
+@link-hover-color       : tint(@link-color, 20%);
+@link-active-color      : shade(@link-color, 5%);
+@selected-color         : fade(@primary-color, 90%);
+@tooltip-color          : #fff; // 浅色前景
+@subsidiary-color       : #7a8ba9;
+@rate-star-color        : #f5a623;
+@white: #fff;
+@black: #000;
+
+// Base
+@body-background        : #071F41; // 深蓝背景
+@component-background   : #133F78; //#071F41; // 控件的深蓝
+@font-family            : "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+@code-family            : Consolas,Menlo,Courier,monospace;
+@title-color            : #fff;
+@text-color             : #fff;
+@text-color-secondary: fade(@white, 65%);
+@heading-color: fade(@white, 85%);
+@heading-color-dark: fade(@white, 100%);
+
+// Border color
+@border-color-base      : #1a3a6b; // 深蓝边框
+@border-color-split     : #25457a; // 深蓝边框
+
+// Background color
+@background-color-base        : #0d2a5a;
+@background-color-select-hover: @input-disabled-bg;
+@tooltip-bg                   : rgba(7, 31, 65, 0.9);
+@head-bg                      : #071F41;
+@table-thead-bg               : #071F41;
+@table-td-stripe-bg           : #071F41;
+@table-td-hover-bg            : #0d2a5a;
+@table-td-highlight-bg        : #0d2a5a;
+@menu-dark-title              : #fff;
+@menu-dark-active-bg          : #2d8cf0;
+@menu-light                   : #071F41;
+@menu-dark-subsidiary-color   : rgba(255,255,255,.7);
+@menu-dark-group-title-color  : rgba(255,255,255,.36);
+@menu-submenu-background-color: @component-background;
+@date-picker-cell-hover-bg    : #0d2a5a;
+
+// Shadow
+@shadow-color           : rgba(0, 0, 0, 0.2);
+@shadow-base            : @shadow-down;
+@shadow-card            : 0 1px 1px 0 rgba(0,0,0,.1);
+@shadow-up              : 0 -1px 6px @shadow-color;
+@shadow-down            : 0 1px 6px @shadow-color;
+@shadow-left            : -1px 0 6px @shadow-color;
+@shadow-right           : 1px 0 6px @shadow-color;
+
+// button color
+@btn-group-border       : shade(@primary-color, 5%);
+
+@btn-disable-color      : #7a8ba9;
+@btn-disable-bg         : #0d2a5a;
+@btn-disable-border     : #1a3a6b;
+
+@btn-default-color      : #fff;
+@btn-default-bg         : #071F41;
+@btn-default-border-color : #BCBCBC; //#1a3a6b;
+@btn-default-border : 0.5px solid #BCBCBC;
+
+@btn-primary-color      : #fff;
+@btn-primary-bg         : @primary-color;
+
+@btn-ghost-color        : #fff;
+@btn-ghost-bg           : transparent;
+@btn-ghost-border       : #fff;
+
+// Layout and Grid
+@grid-columns                : 24;
+@grid-gutter-width           : 0;
+@layout-body-background      : #071F41;
+@layout-header-background    : #071F41;
+@layout-footer-background    : @layout-body-background;
+@layout-sider-background     : @layout-header-background;
+@layout-trigger-color        : #fff;
+
+// Legend
+@legend-color           : #7a8ba9;
+
+// Input
+@input-placeholder-color     : #7a8ba9;
+@input-color                 : #fff;
+@input-border-color          : #1a3a6b;
+@input-bg                    : #071F41;
+@input-group-bg              : #071F41;
+
+@input-hover-border-color    : @primary-color;
+@input-focus-border-color    : @primary-color;
+@input-disabled-bg           : #0d2a5a;
+
+// Slider
+@slider-color              : tint(@primary-color, 20%);
+@slider-height             : 4px;
+@slider-disabled-color     : #7a8ba9;
+
+// Avatar
+@avatar-bg: #2d8cf0;
+@avatar-color: #fff;
+@avatar-border-radius: @border-radius-small;
+
+// 滑块
+@scroll-bar-color: #1a3a6b;
+@scroll-bar-background-color: #195db8;//#2d8cf0;
+@scroll-bar-hover-color: #2d8cf0;//#3d9cff;
+
+@article-blockquote-border-color: #1a3a6b;
+@article-blockquote-color: #7a8ba9;
+@article-a-after-color: #1a3a6b;
+@highlight-color: rgba(7, 31, 65, 0);
+@mark_background-color: #faad14;
+@mark_color: @black;
+@fieldset_border_color: #1a3a6b;
+
+@checkbox-hover-border-color: #1a3a6b;
+@checkbox-inner-background-color: @white;
+@checkbox-border-color: #2d8cf0;
+
+@close-base-hover-color: #7a8ba9;
+@mask-background-color: rgba(7, 31, 65, 0.6);
+@back-top-inner-background-color: rgba(7, 31, 65, 0.6);
+@back-top-inner-box-shadow: rgba(7, 31, 65, 0.2);
+@back-top-inner-hover-background-color: rgba(7, 31, 65, 0.7);
+@card-hover-border-color: #2d8cf0;
+@carousel-arrow-background-color: rgba(7, 31, 65, 0.11);
+@carousel-hover-background-color: rgba(7, 31, 65, 0.5);
+@carousel-dots-li-button-background: #2d8cf0;
+@color-picker-circle-dot-color03: rgba(7, 31, 65, 0.3);
+@color-picker-circle-dot-color04: rgba(7, 31, 65, 0.4);
+@color-picker-circle-dot-color15: rgba(7, 31, 65, 0.15);
+@color-picker-white0: rgba(0, 0, 0, 0);
+@color-picker-black0: rgba(255, 255, 255, 0);
+@color-picker-black06: rgba(255, 255, 255, 0.6);
+@rgb-243: rgb(7, 31, 65);
+@rgba-02: rgba(7, 31, 65, 0.2);
+@rgb-192: rgb(7, 31, 65);
+@rgb-255: rgb(255, 255, 255);
+@rgba-015: rgba(7, 31, 65, 0.15);
+@rgba-0: rgba(7, 31, 65, 0);
+@radio-disabled-wrapper-checked: #071F41;
+@rate-star-first-color: #071F41;
+@rgba-255-09: rgba(7, 31, 65, 0.9);
+@rgba-283656-04: rgba(7, 31, 65, 0.4);
+@rgba-233561-25: rgba(7, 31, 65, 0.25);
+
+@table-header-background-color: #195DB8;
+@table-td-background-color: @component-background;
+@table-td-border-bottom: 2px solid @normal-color ;
+@table-td-border-right: 2px solid @normal-color ;
+
+@tag-dot-border: 1px solid #BCBCBC;
+
+@card-background: #071F41;
+

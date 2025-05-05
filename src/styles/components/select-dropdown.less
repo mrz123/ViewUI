@@ -7,7 +7,7 @@
     overflow: auto;
     margin: 5px 0;
     padding: 5px 0;
-    background-color: @white;
+    background-color: @component-background;
     box-sizing: border-box;
     //border: 1px solid @border-color-split;
     border-radius: @btn-border-radius;
@@ -27,4 +27,18 @@
     .@{select-dropdown-prefix-cls} {
         position: absolute !important;
     }
+}
+/* 自定义滚动条样式 */
+.@{select-dropdown-prefix-cls}::-webkit-scrollbar {
+    width: 8px; /* 滚动条宽度 */
+}
+.@{select-dropdown-prefix-cls}::-webkit-scrollbar-track {
+    background: @scroll-bar-color; /* 滚动条轨道颜色 */
+}
+.@{select-dropdown-prefix-cls}::-webkit-scrollbar-thumb {
+    background: @scroll-bar-background-color; /* 滚动条滑块颜色 */
+    border-radius: 6px; /* 滑块圆角 */
+}
+.@{select-dropdown-prefix-cls}::-webkit-scrollbar-thumb:hover {
+    background: @scroll-bar-hover-color; /* 滑块悬停颜色 */
 }

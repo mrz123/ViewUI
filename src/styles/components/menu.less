@@ -12,6 +12,11 @@
     position: relative;
     z-index: @zindex-select;
 
+    &-submenu {
+        margin-top: @menu-submenu-margin-top;
+        background-color: @menu-submenu-background-color;
+    }
+
     &-horizontal{
         height: 60px;
         line-height: 60px;
@@ -47,7 +52,7 @@
     }
 
     &-light{
-        background: @white;
+        background: @menu-light; //@component-background;
     }
     &-dark{
         background: @menu-dark-title;
@@ -104,12 +109,12 @@
     &-dark&-horizontal &-item, &-dark&-horizontal &-submenu{
         color: @menu-dark-subsidiary-color;
         &-active, &:hover{
-            color: @white;
+            color: @primary-color;
         }
     }
 
     &-primary&-horizontal &-item, &-primary&-horizontal &-submenu{
-        color: @white;
+        color: @menu-dark-active-bg;
         &-active, &:hover{
             //background: @link-active-color;
         }
@@ -205,7 +210,9 @@
         //border-right: 2px solid transparent;
         &-active:not(.@{menu-prefix-cls}-submenu){
             color: @primary-color;
-            background: ~`colorPalette("@{primary-color}", 1)`;
+            //background: ~`colorPalette("@{primary-color}", 1)`;
+            // background: color(~`colorPalette("@{primary-color}", 1)`);
+            background: @menu-dark-active-bg;
             //border-right: 2px solid @primary-color;
             z-index: 2;
             &:after{
@@ -229,22 +236,22 @@
             background: @menu-dark-active-bg;
         }
         &:hover{
-            color: @white;
+            color: @primary-color;
             background: @menu-dark-title;
         }
         &-active:not(.@{menu-prefix-cls}-submenu){
-            color: @primary-color;
+            color: @menu-dark-active-bg;
             //border-right: 2px solid @primary-color;
         }
     }
     &-dark&-vertical &-submenu &-item{
         &:hover{
-            color: @white;
+            color: @primary-color;
             background: transparent !important;
         }
         &-active,&-active:hover{
             border-right: none;
-            color: @white;
+            color: @primary-color;
             background: @primary-color !important;
         }
     }
@@ -252,7 +259,7 @@
     //     color: #fff;
     // }
     &-dark&-vertical &-child-item-active > &-submenu-title{
-        color: @white;
+        color: @menu-dark-active-bg;
     }
 
     &-dark&-vertical &-opened{

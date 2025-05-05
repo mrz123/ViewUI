@@ -1,3 +1,12 @@
+## 本项目来源于：
+[https://idegithub.com/view-design/ViewUI](https://idegithub.com/view-design/ViewUI)
+## 原ViewUI 更新到 4.7.0 后，原作者已不再更新了，以前的项目使用 vue2.0+ViewUI, 但是 ViewUI 不支持动态更改风格
+### 原项目的 打包环境也很已经老了，所以把它升级到 webpack 5.0 后且做相应的修改，暂且定个新版本 V4.7.1
+### 调整了原less文件让它直接由变量生成的 CSS
+
+项目中使用：
+
+
 <p align="center">
     <a href="https://www.iviewui.com">
         <img width="200" src="https://file.iviewui.com/view-ui-logo-new.svg">

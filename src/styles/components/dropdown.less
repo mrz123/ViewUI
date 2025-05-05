@@ -1,3 +1,5 @@
+@import '../color/colorPalette';
+
 @dropdown-prefix-cls: ~"@{css-prefix}dropdown";
 @dropdown-item-prefix-cls: ~"@{dropdown-prefix-cls}-item";
 
@@ -31,7 +33,9 @@
         width: auto;
     }
     &-item-selected, &-item&-item-selected:hover{
-        background:  ~`colorPalette("@{primary-color}", 1)`;
+        //background:  ~`colorPalette("@{primary-color}", 1)`;
+        background: @selected-color;
+
     }
 }
 

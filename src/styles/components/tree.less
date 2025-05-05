@@ -40,10 +40,10 @@
         color: @text-color;
         transition: all @transition-time @ease-in-out;
         &:hover {
-            background-color: tint(@primary-color, 90%);
+            background-color: tint(@primary-color, 50%);
         }
         &-selected, &-selected:hover{
-            background-color: tint(@primary-color, 80%);
+            background-color: tint(@primary-color, 60%);
         }
     }
     &-arrow{
@@ -79,5 +79,23 @@
 
     &-context-menu{
         position: absolute;
+    }
+
+    //自定义滚动条样式
+    &-body::-webkit-scrollbar {
+        width: 8px; /* 滚动条宽度 */
+    }
+    &-body::-webkit-scrollbar-track {
+        // background: #333; /* 滚动条轨道颜色 */
+        background: @scroll-bar-color; /* 滚动条轨道颜色 */
+    }
+    &-body::-webkit-scrollbar-thumb {
+        //background: #666; /* 滚动条滑块颜色 */
+        background: @scroll-bar-background-color; /* 滚动条滑块颜色 */
+        border-radius: 6px; /* 滑块圆角 */
+    }
+    &-body::-webkit-scrollbar-thumb:hover {
+        //background: #888; /* 滑块悬停颜色 */
+        background: @scroll-bar-hover-color; /* 滑块悬停颜色 */
     }
 }

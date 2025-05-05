@@ -26,7 +26,7 @@
         height: 100%;
         border-left: 1px solid @border-color-base;
         border-radius: @radius-wrap;
-        background: @white;
+        background: @body-background;
         position: absolute;
         top: 0;
         right: 0;
@@ -54,7 +54,7 @@
     &-handler {
         display: block;
         width: 100%;
-        height: @input-height-base / 2;
+        height: calc(@input-height-base / 2);
         line-height: 0;
         text-align: center;
         overflow: hidden;
@@ -109,6 +109,7 @@
         border: 0;
         border-radius: @btn-border-radius;
         transition: all @transition-time linear;
+        background-color: @body-background;
 
         &[disabled] {
             .disabled();
@@ -125,7 +126,7 @@
             height: @input-height-large;
         }
         .@{input-number-prefix-cls}-handler {
-            height: @input-height-large / 2;
+            height: calc(@input-height-large / 2);
         }
 
         input {
@@ -147,7 +148,7 @@
             height: @input-height-small;
         }
         .@{input-number-prefix-cls}-handler {
-            height: @input-height-small / 2;
+            height: calc(@input-height-small / 2);
         }
 
         input {

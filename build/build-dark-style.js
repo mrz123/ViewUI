@@ -20,7 +20,7 @@ gulp.task('css', function () {
         }))
         .pipe(cleanCSS())
         .pipe(rename('iview.css'))
-        .pipe(gulp.dest('../dist/styles'))
+        .pipe(gulp.dest('../dist/styles/dark'))
         .pipe(gulp.dest('./temp'));
 });
 
@@ -33,7 +33,7 @@ gulp.task('css', function () {
 
 gulp.task('fonts', function (done) { // 使用回调函数
     gulp.src('../src/styles/common/iconfont/fonts/*.*')
-        .pipe(gulp.dest('../dist/styles/fonts'))
+        .pipe(gulp.dest('../dist/styles/dark/fonts'))
         .on('end', done); // 标记任务完成
 });
 

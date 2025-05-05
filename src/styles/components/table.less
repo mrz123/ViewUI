@@ -20,7 +20,7 @@
     overflow: hidden;
     color: @text-color;
     font-size: @font-size-base;
-    background-color: @white;
+    background-color: @component-background;
 
     box-sizing: border-box;
     //position: relative;
@@ -100,12 +100,15 @@
 
     &-header{
         overflow: hidden;
+        background-color: @table-header-background-color;
         thead{
             tr{
                 th{
                     position: relative;
                     height: 100%;
                     padding: 8px 0;
+                    font-weight: @table-header-font-weight;
+                    background-color: @table-header-background-color;
                 }
             }
         }
@@ -154,17 +157,24 @@
         text-overflow: ellipsis;
         vertical-align: middle;
         //position: relative;
-        border-bottom: 1px solid @border-color-split;
+        // border-bottom: 1px solid @border-color-split;
+        border-bottom: @table-td-border-bottom;
+        border-right: @table-td-border-right;
+    }
+    tr {
+        border-bottom: @table-td-border-bottom;
     }
 
     th {
         height: 40px;
         white-space: nowrap;
         overflow: hidden;
-        background-color: @table-thead-bg;
+        // background-color: @table-thead-bg;
+        background-color: @table-header-background-color;
     }
     td{
-        background-color: @white;
+        background-color: @table-td-background-color;
+        border-right: @table-td-border-right;
         transition: background-color @transition-time @ease-in-out;
     }
 
@@ -254,7 +264,7 @@
             height: 16px;
             border: 1px solid @border-color-base;
             border-radius: 2px;
-            background-color: @white;
+            background-color: @component-background;
             line-height: 12px;
             cursor: pointer;
             vertical-align: middle;
@@ -448,6 +458,26 @@
         overflow: hidden;
         position: relative;
         z-index: 3;
+
+    }
+    //自定义滚动条样式
+    &-body::-webkit-scrollbar {
+        width: 8px; /* 滚动条宽度 */
+        height: 10px; /* 如果是横向滚动条，调整高度 */
+    }
+    &-body::-webkit-scrollbar-track {
+        // background: #333; /* 滚动条轨道颜色 */
+        background: @scroll-bar-color; /* 滚动条轨道颜色 */
+    }
+    &-body::-webkit-scrollbar-thumb {
+        //background: #666; /* 滚动条滑块颜色 */
+        background: @scroll-bar-background-color; /* 滚动条滑块颜色 */
+        border-radius: 6px; /* 滑块圆角 */
+        cursor: pointer;
+    }
+    &-body::-webkit-scrollbar-thumb:hover {
+        //background: #888; /* 滑块悬停颜色 */
+        background: @scroll-bar-hover-color; /* 滑块悬停颜色 */
     }
 
     &-fixed-shadow {
@@ -523,6 +553,25 @@
             }
         }
     }
+    //自定义滚动条样式
+    &-tip::-webkit-scrollbar {
+        width: 8px; /* 滚动条宽度 */
+        height: 10px; /* 如果是横向滚动条，调整高度 */
+    }
+    &-tip::-webkit-scrollbar-track {
+        // background: #333; /* 滚动条轨道颜色 */
+        background: @scroll-bar-color; /* 滚动条轨道颜色 */
+    }
+    &-tip::-webkit-scrollbar-thumb {
+        //background: #666; /* 滚动条滑块颜色 */
+        background: @scroll-bar-background-color; /* 滚动条滑块颜色 */
+        border-radius: 6px; /* 滑块圆角 */
+        cursor: pointer;
+    }
+    &-tip::-webkit-scrollbar-thumb:hover {
+        //background: #888; /* 滑块悬停颜色 */
+        background: @scroll-bar-hover-color; /* 滑块悬停颜色 */
+    }
 
     &-expanded-hidden{
         visibility: hidden;
@@ -531,6 +580,8 @@
     &-context-menu{
         position: absolute;
     }
+
+
 }
 .ivu-table-popper{
     min-width: 0;
